@@ -28,10 +28,14 @@
             Take Action
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="register.php">Register</a></li>
-            <li><a class="dropdown-item" href="login.php">Login</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+            <?php if(isset($_COOKIE["is_logged_in"])) { ?>
+              <li><a class="dropdown-item" href="profile.php">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+            <?php } else { ?>
+              <li><a class="dropdown-item" href="register.php">Register</a></li>
+              <li><a class="dropdown-item" href="login.php">Login</a></li>
+            <?php } ?>
           </ul>
           <li>
       </ul>
