@@ -1,3 +1,7 @@
-<?php include "includes/header.php"; ?>
+<?php
+setcookie('is_logged_in', time()-3600);
+setcookie('email', "", time()-3600);
 
-<?php include "includes/footer.php"; ?>
+header("Location:index.php")
+
+?>
