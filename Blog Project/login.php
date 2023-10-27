@@ -1,3 +1,5 @@
+<!-- Login Page -->
+
 <?php
 
     require "config/database.php";
