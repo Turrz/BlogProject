@@ -1,5 +1,8 @@
+<!-- Register Page -->
+
 <?php
     require "config/database.php";
+    
     if (count($_COOKIE) > 0) {
         header("Location:index.php");
     }
